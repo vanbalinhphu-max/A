@@ -1,26 +1,26 @@
 import { getNewQuote } from "./action";
 
-// async function fetchDailyQuote() {
-//   const res = await fetch(`/api/quote`, {
-//     cache: "force-cache",
-//     next: {
-//       tags: ["quote"],
-//     },
-//   });
+async function fetchDailyQuote() {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/quote`, {
+    cache: "force-cache",
+    next: {
+      tags: ["quote"],
+    },
+  });
 
-//   if (!res.ok) {
-//     throw new Error("Fail to fetch data");
-//   }
+  if (!res.ok) {
+    throw new Error("Fail to fetch data");
+  }
 
-//   return res.json();
-// }
+  return res.json();
+}
 
 const QuoteDisplay = async () => {
-  // const result = await fetchDailyQuote();
-  const result = {
-    quote: 'aaa',
-    generatedAt: 'aaa'
-  }
+  const result = await fetchDailyQuote();
+  // const result = {
+  //   quote: 'aaa',
+  //   generatedAt: 'aaa'
+  // }
 
   return (
     <div>
