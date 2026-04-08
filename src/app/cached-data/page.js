@@ -18,7 +18,7 @@ async function fetchData() {
 }
 
 const CachedData = async () => {
-  // const data = await fetchData();
+  const data = await fetchData();
   // const data = {timestamp: 'aaa'}
 
   return (
