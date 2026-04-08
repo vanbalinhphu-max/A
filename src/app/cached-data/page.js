@@ -6,7 +6,7 @@ import { clearTimeStamp } from "./action";
 async function fetchData() {
   console.log("Fetching data,...");
 
-  const res = await fetch("http://localhost:3000/api/timestamp", {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/timestamp`, {
     cache: "force-cache",
     next: {
       // revalidate: 60
