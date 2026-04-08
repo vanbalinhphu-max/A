@@ -14,7 +14,7 @@ export const useLoginAction = () => {
     setError(""); //xoá lỗi cũ trước khi thử login mới
 
     try {
-      const res = await fetch("/api/auth/login", {
+      const res = await fetch(`${process.env.API_BASE_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
