@@ -1,22 +1,23 @@
 import Link from "next/link";
 import { clearTimeStamp } from "./action";
 
-async function fetchData() {
-  console.log("Fetching data,...");
+// async function fetchData() {
+//   console.log("Fetching data,...");
 
-  const res = await fetch("http://localhost:3000/api/timestamp", {
-    cache: "force-cache",
-    next: {
-      // revalidate: 60
-      tags: ['timestamp']
-    }
-  });
+//   const res = await fetch("http://localhost:3000/api/timestamp", {
+//     cache: "force-cache",
+//     next: {
+//       // revalidate: 60
+//       tags: ['timestamp']
+//     }
+//   });
 
-  return res.json();
-}
+//   return res.json();
+// }
 
 const CachedData = async () => {
-  const data = await fetchData();
+  // const data = await fetchData();
+  const data = {timestamp: 'aaa'}
 
   return (
     <div>
