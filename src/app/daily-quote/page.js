@@ -9,7 +9,7 @@ const DailyQuotePage = async () => {
     <>
       <h1>Daily quote</h1>
       <Suspense fallback={<LoadingFallback />}>
-        <QuoteDisplay />
+        {/* <QuoteDisplay /> */}
       </Suspense>
       <Footer />
     </>

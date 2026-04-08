@@ -10,8 +10,11 @@ async function fetchData() {
 
 
 const MemoizationPage = async () => {
-  const data1 = await fetchData();
-  const data2 = await fetchData();
+  // const data1 = await fetchData();
+  // const data2 = await fetchData();
+
+  const data1 = {timestamp: 'aaa'}
+  const data2 = {timestamp: 'aaa'}
 
   return (
       <div>
