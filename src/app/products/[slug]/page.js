@@ -1,12 +1,12 @@
 import { revalidateProductPath } from "./action";
 
-export async function generateStaticParams() {
-  const products = ['product-1', 'product-2', 'product-3'];
+// export async function generateStaticParams() {
+//   const products = ['product-1', 'product-2', 'product-3'];
 
-  return products.map((product) => ({
-    slug: product
-  }))
-}
+//   return products.map((product) => ({
+//     slug: product
+//   }))
+// }
 
 const ProductPage = async ({ params }) => {
   const { slug } = await params;

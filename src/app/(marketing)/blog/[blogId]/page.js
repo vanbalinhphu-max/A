@@ -3,21 +3,19 @@ import Link from "next/link";
 import styles from "./blog-detail.module.css";
 import BlogIdDisplay from "./BlogIdDisplay";
 
-export async function generateStaticParams() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+// export async function generateStaticParams() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 
-  // if (!res.ok) {
-  //   throw new Error("Fail to fetch data");
-  // }
+//   if (!res.ok) {
+//     throw new Error("Fail to fetch data");
+//   }
 
-  const posts = await res.json();
+//   const posts = await res.json();
 
-  console.log('postspostsposts', posts)
-
-  return posts.map((post) => ({
-    blogId: String(post.id),
-  }));
-}
+//   return posts.map((post) => ({
+//     blogId: String(post.id),
+//   }));
+// }
 
 export const dynamicParams = true; //mac dinh
 
