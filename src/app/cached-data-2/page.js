@@ -8,7 +8,7 @@ async function fetchData() {
   // const res = await fetch("/api/timestamp", {
   //   cache: "force-cache",
   // });
-  const res = await fetch(`${process.env.BASE_URL}/api/timestamp`, {
+  const res = await fetch(`${process.env.API_BASE_URL}/api/timestamp`, {
   cache: "no-store",
   });
 
