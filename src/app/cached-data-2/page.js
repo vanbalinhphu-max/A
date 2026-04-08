@@ -1,18 +1,20 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 
-// async function fetchData() {
-//   console.log("Fetching data,...");
+async function fetchData() {
+  console.log("Fetching data,...");
 
-//   const res = await fetch("http://localhost:3000/api/timestamp", {
-//     cache: "force-cache",
-//   });
+  const res = await fetch("/api/timestamp", {
+    cache: "force-cache",
+  });
 
-//   return res.json();
-// }
+  return res.json();
+}
 
 const CachedData2 = async () => {
-  // const data = await fetchData();
-  const data = {timestamp: 'aaa'}
+  const data = await fetchData();
+  // const data = {timestamp: 'aaa'}
 
   return (
     <div>
