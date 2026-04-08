@@ -5,8 +5,11 @@ import Link from "next/link";
 async function fetchData() {
   console.log("Fetching data,...");
 
-  const res = await fetch("/api/timestamp", {
-    cache: "force-cache",
+  // const res = await fetch("/api/timestamp", {
+  //   cache: "force-cache",
+  // });
+  const res = await fetch(`${process.env.BASE_URL}/api/timestamp`, {
+  cache: "no-store",
   });
 
   return res.json();
